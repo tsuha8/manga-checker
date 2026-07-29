@@ -1,0 +1,30 @@
+name: Manga Checker
+
+on:
+  schedule:
+    - cron: '0 3,15 * * *'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ソースを取得
+        uses: actions/checkout@v4
+
+      - name: Pythonを準備
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ライブラリをインストール
+        run: |
+          pip install requests beautifulsoup4 line-bot-sdk
+
+      - name: 漫画更新チェック
+        env:
+          CHANNEL_ACCESS_TOKEN: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+          USER_ID: ${{ secrets.USER_ID }}
+        run: |
+          python checker.py
