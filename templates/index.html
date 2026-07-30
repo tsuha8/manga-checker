@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>漫画追加</title>
+    <title>漫画管理</title>
 </head>
 
 <body>
 
-<h1>漫画追加</h1>
+<h1>◆ 漫画追加</h1>
 
 <form action="/add" method="post">
 
@@ -32,6 +32,37 @@ URL<br>
 </button>
 
 </form>
+
+
+<hr>
+
+
+<h1>◆ 登録済み漫画</h1>
+
+{% for manga in mangas %}
+
+<div>
+<p>
+<strong>{{ manga.title }}</strong><br>
+{{ manga.site }}<br>
+<a href="{{ manga.url }}" target="_blank">
+{{ manga.url }}
+</a>
+</p>
+
+<form action="/delete" method="post">
+<input type="hidden" name="url" value="{{ manga.url }}">
+<button type="submit">
+削除
+</button>
+</form>
+
+<hr>
+
+</div>
+
+{% endfor %}
+
 
 </body>
 </html>
