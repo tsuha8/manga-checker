@@ -96,9 +96,9 @@ with open("last_update.json", "w", encoding="utf-8") as f:
 
 
 if notifications:
-   send_line(
-    "\n\n".join(notifications)
-)
+    send_line(
+        "\n\n".join(notifications)
+    )
     print("通知送信")
 else:
     print("更新なし")
