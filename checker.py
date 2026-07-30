@@ -78,7 +78,8 @@ for manga in mangas:
             notifications.append(
     f'◆ 最新話更新\n\n'
     f'{manga["title"]}\n'
-    f'{title}\n'
+    f'{title.replace(" | " + manga["site"], "")}\n'
+    f'{manga["site"]}\n'
     f'{manga["url"]}'
 )
 
