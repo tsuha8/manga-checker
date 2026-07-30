@@ -99,5 +99,4 @@ if notifications:
     )
     print("通知送信")
 else:
-    send_line("📚 Manga Checker テスト通知")
-    print("テスト通知送信")
+    print("更新なし")
