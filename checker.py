@@ -76,8 +76,11 @@ for manga in mangas:
     if manga["title"] in old_data:
         if old_data[manga["title"]] != title:
             notifications.append(
-                f'{manga["title"]}\n更新されました\n{title}'
-            )
+    f'◆ 最新話更新\n\n'
+    f'{manga["title"]}\n'
+    f'{title}\n'
+    f'{manga["url"]}'
+)
 
     else:
         print("初回登録")
