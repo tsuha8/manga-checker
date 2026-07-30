@@ -1,1 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>漫画追加</title>
+</head>
 
+<body>
+
+<h1>漫画追加</h1>
+
+<form action="/add" method="post">
+
+<p>
+作品名<br>
+<input type="text" name="title" required>
+</p>
+
+<p>
+サイト名<br>
+<input type="text" name="site" required>
+</p>
+
+<p>
+URL<br>
+<input type="url" name="url" required>
+</p>
+
+<button type="submit">
+追加する
+</button>
+
+</form>
+
+</body>
+</html>
