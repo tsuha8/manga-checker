@@ -1,5 +1,10 @@
 name: Manga Checker
 
+on:
+  schedule:
+    - cron: '0 3,15 * * *'
+  workflow_dispatch:
+
 permissions:
   contents: write
 
