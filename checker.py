@@ -75,10 +75,10 @@ for manga in mangas:
 
     if manga["title"] in old_data:
         if old_data[manga["title"]] != title:
-            notifications.append(
+         notifications.append(
     f'◆ 最新話更新\n\n'
     f'{manga["title"]}\n'
-    f'{title.replace(" | " + manga["site"], "")}\n'
+    f'{title}\n'
     f'{manga["site"]}\n'
     f'{manga["url"]}'
 )
