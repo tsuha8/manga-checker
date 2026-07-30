@@ -12,8 +12,8 @@ from linebot.v3.messaging import (
 )
 
 
-CHANNEL_ACCESS_TOKEN = "Z7A5WVpFdZ+ly9sS3Dvnj5WZ9nZylxci5XqPS5fBTbZXAkLfUHT/GqHHdVTQwo3ZOCDlxctg4xWEFsA9VEzHwbprvR7WdygJYcPAoTfWdwo9IUrR0z2/ZnZM3940rhmvyGLjvIpAS2ag+/BBKN4elQdB04t89/1O/w1cDnyilFU="
-USER_ID = "U9042e2826eeb83cd12b9b067a1fee8ca"
+CHANNEL_ACCESS_TOKEN = os.environ["CHANNEL_ACCESS_TOKEN"]
+USER_ID = os.environ["USER_ID"]
 
 
 def send_line(message):
