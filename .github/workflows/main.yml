@@ -28,3 +28,11 @@ jobs:
           USER_ID: ${{ secrets.USER_ID }}
         run: |
           python checker.py
+          
+               - name: 更新データを保存
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add last_update.json
+          git commit -m "Update last_update.json" || exit 0
+          git push
